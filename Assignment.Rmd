@@ -1,0 +1,25 @@
+---
+title: "Coursera Developing Data Products Assignment 3"
+author: "Scott Jones"
+date: "10 December 2017"
+output: slidy_presentation
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+
+library(plotly)
+```
+
+## Assignment Instructions
+
+Create a web page presentation using R Markdown that features a plot created with Plotly. Host your webpage on either GitHub Pages, RPubs, or NeoCities. Your webpage must contain the date that you created the document, and it must contain a plot created with Plotly.
+
+
+```{r plot, echo = FALSE}
+
+uk_housing <- read.csv("UK_Housing_Prices2.csv")
+p<- plot_ly(data=uk_housing, x = ~Year, y = ~Price, color=~Type, type="bar") %>% layout(title="UK Year End House Prices By Type of Property, 2005-2016 ", xaxis=list(title="Date"), yaxis=list(title="Price (£)"))
+p
+
+```

@@ -1,0 +1,47 @@
+---
+title: "Coursera Developing Data Products Assignment 4"
+author: "Scott Jones"
+date: "17 December 2017"
+output: slidy_presentation
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+
+```
+
+##Background
+
+This peer assessed assignment has two parts. 
+
+First, create a Shiny application and deploy it on Rstudio's servers. The app can be found here:
+
+https://scottjones7work.shinyapps.io/Car_Model/
+
+Second, use Slidify or Rstudio Presenter to prepare a reproducible pitch presentation about your application. This is the document that fulfils that requirement.
+
+The app is a very simple application that provides box plots from the Motor Trend Car Road Tests data, which is provided in R.
+
+
+##Application
+
+The data used in the application has these attributes
+
+```{r display}
+summary(mtcars[,c('mpg','cyl','gear')])
+```
+
+
+
+
+##Using the app
+
+The app looks like the screenshot below. Simply click in the box on the left to select the attribute you're interested in, then select whether you'd like to see any outliers in the data.
+
+![Application Screenshot](Capture.png)
+
+
+
+
+
+
